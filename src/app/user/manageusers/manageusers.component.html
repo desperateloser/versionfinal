@@ -1,0 +1,82 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <a routerLink="/adduser">
+            <button mat-raised-button type="button"  class="btn btn-warning"><i class="fa fa-plus-circle"></i>  Ajouter un membre</button></a>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+
+                        <h4 class="card-title ">Liste des membres</h4>
+                        <p class="card-category"> Ajoutez, modifiez ou supprimez des membres</p>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-dark">
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Nom & Prénom
+                                </th>
+                                <th>
+                                    E-mail
+                                </th>
+
+                                <th>
+                                    Droits
+                                </th>
+                                <th>
+
+                                </th>
+                                </thead>
+                                <tbody>
+                                <tr>
+
+                                </tr>
+
+                                <tr *ngFor="let user of users">
+                                    <td>
+                                        {{ user.id_user}}
+                                    </td>
+                                    <td>
+                                        {{user.first_name}} {{user.last_name}}
+                                    </td>
+                                    <td>
+                                        {{ user.email}}
+                                    </td>
+                                    <td class="text-primary">
+
+                                    </td>
+                                    <td><a routerLink="/users">
+                                        <button mat-raised-button type="button" matTooltip="Afficher" [matTooltipPosition]="'above'" class="btn btn-info btn-link btn-sm btn-just-icon">
+                                            <i class="fa fa-eye"></i></button></a> </td>
+                                    <td>
+                                        <a routerLink="/edituser">
+                                            <button mat-raised-button type="button" matTooltip="Modifier" [matTooltipPosition]="'above'" class="btn btn-success btn-link btn-sm btn-just-icon">
+                                                <i class="material-icons">edit</i></button></a></td>
+                                    <td>
+                                        <button mat-raised-button type="button" (click)="deleteUser(user.id_user)" matTooltip="Supprimer" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                            <i class="material-icons">close</i></button></td>
+
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card card-plain">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

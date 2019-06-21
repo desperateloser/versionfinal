@@ -1,0 +1,16 @@
+.card-header {
+    background-color: rgb(131, 126, 118);
+    font-style: bold;
+    font-size: 20px;
+    color: white;
+}
+#bouton{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#wrapper{
+    display : flex;
+    align-items: center;
+    justify-content: center; 
+}

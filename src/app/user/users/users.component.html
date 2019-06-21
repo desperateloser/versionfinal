@@ -1,0 +1,36 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-warning">
+            <h4 class="card-title">Trombinoscope</h4>
+            <p class="card-category">Ici vous trouvez la liste des membres et leurs informations.</p>
+        </div>
+        <div class="card-body " *ngFor="let user of users">
+
+           <br/>
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                        <div class="card card-profile bg-light text-dark">
+                            <div class="card-avatar">
+                                    <img class="img" src="./assets/img/profile.png" />
+                            </div>
+                            <div class="card-body">
+                                
+                                <h4 class="card-title text-dark">{{user.first_name}} {{user.last_name}}</h4> <hr>
+                                {{user.email}} <br>
+                                 {{user.phone_number}} <br>
+                                 {{user.address}}
+                            </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+        </div>
+    </div>
+</div>
